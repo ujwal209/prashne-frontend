@@ -11,6 +11,7 @@ import CreateCompany from './pages/admin/CreateCompany';
 import UserList from './pages/admin/UserList';
 import CreateUser from './pages/admin/CreateUser';
 
+<<<<<<< HEAD
 import Register from './pages/Register';
 import VerifyEmail from './pages/VerifyEmail';
 import CandidateLayout from './layouts/CandidateLayout';
@@ -18,6 +19,9 @@ import CandidateDashboard from './pages/candidate/Dashboard';
 import PracticeArena from './pages/candidate/Practice';
 
 import HRLayout from './layouts/HRLayout';
+=======
+import HRLayout from './layouts/HRLayout'; 
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
 import HRDashboard from './pages/hr/Dashboard';
 import ResumesList from './pages/hr/ResumesList';
 import ResumeUpload from './pages/hr/ResumeUpload';
@@ -32,13 +36,17 @@ import InterviewsList from './pages/hr/InterviewsList';
 import ScheduleInterview from './pages/hr/ScheduleInterview';
 import InterviewRoom from './pages/InterviewRoom';
 
+<<<<<<< HEAD
 import Landing from './pages/Landing';
 
+=======
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Routes>
+<<<<<<< HEAD
           <Route path="/" element={<Landing />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/register" element={<Register />} />
@@ -56,12 +64,17 @@ function App() {
             <Route path="practice" element={<PracticeArena />} />
           </Route>
 
+=======
+          <Route path="/login" element={<Login />} />
+
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
           {/* Super Admin Routes */}
           <Route path="/admin" element={
             <ProtectedRoute>
               <SuperAdminLayout />
             </ProtectedRoute>
           }>
+<<<<<<< HEAD
             <Route index element={<AdminDashboard />} />
 
             {/* Tenant Management */}
@@ -71,6 +84,17 @@ function App() {
             {/* User Management */}
             <Route path="users" element={<UserList />} />
             <Route path="users/new" element={<CreateUser />} />
+=======
+              <Route index element={<AdminDashboard />} />
+              
+              {/* Tenant Management */}
+              <Route path="companies" element={<CompanyList />} />
+              <Route path="companies/new" element={<CreateCompany />} />
+              
+              {/* User Management */}
+              <Route path="users" element={<UserList />} />
+              <Route path="users/new" element={<CreateUser />} />
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
           </Route>
 
           {/* HR Admin Routes */}
@@ -79,6 +103,7 @@ function App() {
               <HRLayout />
             </ProtectedRoute>
           }>
+<<<<<<< HEAD
             <Route path="dashboard" element={<HRDashboard />} />
             <Route path="leaderboard" element={<LeaderboardPage />} />
             <Route path="talent" element={<ResumesList />} />
@@ -93,6 +118,22 @@ function App() {
             <Route path="schedule" element={<ScheduleInterview />} />
             <Route path="profile" element={<Profile />} />
             <Route path="admin" element={<HRAdminDashboard />} />
+=======
+              <Route path="dashboard" element={<HRDashboard />} />
+              <Route path="leaderboard" element={<LeaderboardPage />} />
+              <Route path="talent" element={<ResumesList />} />
+              <Route path="upload" element={<ResumeUpload />} />
+              <Route path="jobs" element={<JobsList />} />
+              <Route path="jobs/new" element={<CreateJob />} />
+              <Route path="jobs/create" element={<CreateJob />} />
+              <Route path="jobs/edit/:id" element={<CreateJob />} />
+              <Route path="match" element={<SmartMatch />} />
+              <Route path="history" element={<MatchHistory />} />
+              <Route path="interviews" element={<InterviewsList />} />
+              <Route path="schedule" element={<ScheduleInterview />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="admin" element={<HRAdminDashboard />} />
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
           </Route>
 
           {/* Public/Semi-Protected Interview Room */}
@@ -100,6 +141,10 @@ function App() {
 
           {/* Default/Generic Dashboard Redirect */}
           <Route path="/dashboard" element={<Navigate to="/hr/dashboard" replace />} />
+<<<<<<< HEAD
+=======
+          <Route path="/" element={<Navigate to="/login" replace />} />
+>>>>>>> c22e57f15658acb56e240bc10a7e750daacbf34f
         </Routes>
       </Router>
     </AuthProvider>
